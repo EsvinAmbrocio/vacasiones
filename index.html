@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="hola">
+
+        <form action="" id="vacasiones" >
+            <div id="elimina">
+                <div>
+                    <label for="">
+                        Nombre
+                        <input type="text" id="nombre">
+                    </label>
+                </div>
+                <div>
+                    <label for="">
+                        Puesto
+                        <span id="puesto"></span>
+                    </label>
+                </div>
+                <div>
+                    <label for="">
+                        Periodo
+                        <input type="number" name="" id="periodo">
+                    </label>
+                </div>
+                <input type="hidden" id="dpi">
+                <fieldset>
+                    <legend>solicitud</legend>
+                    
+                    <label for="">
+                        inicio
+                        <input type="date" name="" id="fechaInicial">
+                    </label>
+                    <label for="">
+                        Finalizacion
+                        <input type="date" name="" id="fechaFinalizacion">
+                    </label>
+                    
+                </fieldset>
+                <button type="submit">solicitud</button>
+            </div>
+    </div>            
+    </form>
+    <p id="alerta"></p>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+</body>
+</html>

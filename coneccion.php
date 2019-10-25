@@ -1,6 +1,6 @@
 <?php
     try {
-        $pdo = new PDO('mysql:host=localhost;dbname=id11356523_vacasiones;charset=utf8','id11356523_vacasiones','(danilo)0308');
+        $pdo = new PDO('mysql:host=localhost;dbname=vacasiones;charset=utf8','root','');
         //charser=utf8 esto funciona para mostrar todos los caracteres
     }
     catch(PDOException$e){

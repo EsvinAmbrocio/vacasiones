@@ -1,3 +1,5 @@
+CREATE DATABASE vacasiones;
+USE vacasiones;
 CREATE TABLE `trabajadores` (
   `dpi` int(11) NOT NULL,
   `Nombre` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
@@ -22,4 +24,3 @@ INSERT INTO `vacasiones` (`dpi`, `periodo`, `fechaInicial`, `fechaFinalizacion`,
 (2, 3, '2019-10-03', '2019-10-18', 'En proceso');
 ALTER TABLE `trabajadores`
   ADD PRIMARY KEY (`dpi`);
-COMMIT;

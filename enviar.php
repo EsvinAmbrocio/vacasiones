@@ -10,8 +10,8 @@ if(isset($_POST['dpi'])){
         'fechaFinalizacion' =>$_POST['fechaFinalizacion'],
         'proceso' => $_POST['proceso'],
     ];
-    
-    $vacasiones = new vacasiones();
+
+    $vacasiones = new vacasiones($pdo);
     $add=$vacasiones->Agregar($datos);
     if($add){
         die('Query Failed');

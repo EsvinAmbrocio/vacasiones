@@ -3,7 +3,7 @@
     include('./funciones.php');
     $search=$_POST['search'];
     if(!empty($search)){
-        $task= new vacasiones();
+        $task= new vacasiones($pdo);
         $search=$task->buscar($search);
         //if(!$search){
           // die('Query Error' . $search->errorInfo());

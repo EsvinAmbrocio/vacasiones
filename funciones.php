@@ -1,25 +1,34 @@
 <?php
-class vacasiones{
-    public function buscar($search){
-        global $pdo;
-        $query = $pdo->prepare("
-        SELECT
-            *
-        FROM
-            trabajadores
-        WHERE
-            Nombre 
-        LIKE ?
+class vacasiones
+{
+    protected $connection;
+
+    public function __construct($connection)
+    {
+        $this->connection = $connection;
+    }
+
+    public function buscar($search)
+    {
+        $query = $this->connection->prepare("
+            SELECT
+                *
+            FROM
+                trabajadores
+            WHERE
+                Nombre
+            LIKE ?
         ");
         $params = array("%$search%");
         $query->execute(
             $params
-            );
+        );
         return $query->fetchALL();
     }
-    public function Agregar($datos){
-        global $pdo;
-        $query = $pdo->prepare("
+
+    public function Agregar($datos)
+    {
+        $query = $this->connection->prepare("
         INSERT INTO
             vacasiones
         SET
@@ -29,13 +38,14 @@ class vacasiones{
             fechaFinalizacion=:fechaFinalizacion,
             estado=:proceso
         ");
+
         $query->execute([
-            'dpi'=>$datos['dpi'],
-            'periodo'=>$datos['periodo'],
-            'fechaInicial'=>$datos['fechaInicial'],
-            'fechaFinalizacion'=>$datos['fechaFinalizacion'],
-            'proceso'=>$datos['proceso'],
-    
-            ]);
-        }
+            'dpi' => $datos['dpi'],
+            'periodo' => $datos['periodo'],
+            'fechaInicial' => $datos['fechaInicial'],
+            'fechaFinalizacion' => $datos['fechaFinalizacion'],
+            'proceso' => $datos['proceso'],
+
+        ]);
+    }
 }

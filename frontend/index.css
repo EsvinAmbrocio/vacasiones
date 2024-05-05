@@ -1,3 +1,41 @@
-.hola{
-    margin: auto; 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main form#vacation-request{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vw;
+    box-shadow: 2px 4px 10px #435AD9;
+    border-radius: 1rem;
+}
+
+form#vacation-request p input,
+form#vacation-request p textarea{
+    box-sizing: border-box;
+    width: 100%;
+}
+form#vacation-request fieldset{
+    border: none;
+    text-decoration: none;
+}
+
+form#vacation-request button{
+    border: none;
+    padding: 0.5vw;
+    box-shadow: 1px 2px 5px #435AD9;
+    background-color: #049DD9;
+    color: white;
+}
+
+form#vacation-request button:hover{
+    box-shadow: none;
+    background-color: white;
+    color: #049DD9;
 }

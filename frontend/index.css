@@ -11,18 +11,24 @@ main form#vacation-request{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2vw;
+    padding: 2.5vw;
     box-shadow: 2px 4px 10px #435AD9;
     border-radius: 1rem;
 }
 
-form#vacation-request p input,
-form#vacation-request p textarea{
+form#vacation-request div {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+form#vacation-request div input,
+form#vacation-request div textarea{
     box-sizing: border-box;
     width: 100%;
 }
 form#vacation-request fieldset{
     border: none;
+    padding: 0;
     text-decoration: none;
 }
 
@@ -34,7 +40,7 @@ form#vacation-request button{
     color: white;
 }
 
-form#vacation-request button:hover{
+form#vacation-request button:focus{
     box-shadow: none;
     background-color: white;
     color: #049DD9;

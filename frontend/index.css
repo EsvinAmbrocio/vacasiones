@@ -40,7 +40,7 @@ form#vacation-request button{
     color: white;
 }
 
-form#vacation-request button:focus{
+form#vacation-request button:hover{
     box-shadow: none;
     background-color: white;
     color: #049DD9;

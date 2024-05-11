@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
   if(!(nameInput instanceof HTMLInputElement)){
     throw new Error('No existe el input de nombre')
   }
-  nameInput.addEventListener('keyup', ()=> {
+  nameInput.addEventListener('keyup', (e)=> {
     if(!Boolean(nameInput.value)){
       return;
     }
